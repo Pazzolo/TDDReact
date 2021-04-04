@@ -3,14 +3,18 @@ import App, { replaceCamelWithSpaces } from "./App";
 
 test("button has correct initial color and text", () => {
   render(<App />);
-  const colorButton = screen.getByRole("button", { name: "Change to Midnight Blue" });
+  const colorButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
 
   expect(colorButton).toHaveStyle({ backgroundColor: "MediumVioletRed" });
 });
 
 test("button turns Midnight Blue when clicked", () => {
   render(<App />);
-  const colorButton = screen.getByRole("button", { name: "Change to Midnight Blue" });
+  const colorButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
 
   fireEvent.click(colorButton);
 
@@ -22,7 +26,9 @@ test("button turns Midnight Blue when clicked", () => {
 test("initial conditions", () => {
   render(<App />);
   //check that the button starts out enabled
-  const colorButton = screen.getByRole("button", { name: "Change to Midnight Blue" });
+  const colorButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
   expect(colorButton).toBeEnabled();
 
   // check the checkbox starts out unchecked
@@ -39,7 +45,9 @@ test("checkbox is checked & button should be disabled then enables in second cli
   //check that checkbox is checked
   expect(checkbox).toBeChecked();
   //check that button is disabled
-  const colorButton = screen.getByRole("button", { name: "Change to Midnight Blue" });
+  const colorButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
   expect(colorButton).toBeDisabled();
 
   //click and check is button is enabled
@@ -49,7 +57,9 @@ test("checkbox is checked & button should be disabled then enables in second cli
 
 test("button has correct color when disabling and checking box", () => {
   render(<App />);
-  const colorButton = screen.getByRole("button", { name: "Change to Midnight Blue" });
+  const colorButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
   const checkbox = screen.getByRole("checkbox", { name: "Disable Button" });
   //disable button -> button color gray
   fireEvent.click(checkbox);
