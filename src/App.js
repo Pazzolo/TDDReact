@@ -18,11 +18,13 @@ function App() {
         Change to {newButtonColor}
       </button>
       <input
+        id="disableButtonCheckbox"
         type="checkbox"
         defaultChecked={buttonEnabled}
         aira-checked={buttonEnabled}
         onChange={(e) => setButtonEnabled(e.target.checked)}
       />
+      <label htmlFor="disableButtonCheckbox">Disable Button</label>
     </div>
   );
 }

@@ -34,7 +34,7 @@ test("checkbox is checked & button should be disabled then enables in second cli
   render(<App />);
 
   //click checkbox
-  const checkbox = screen.getByRole("checkbox");
+  const checkbox = screen.getByRole("checkbox", { name: "Disable Button" });
   fireEvent.click(checkbox);
   //check that checkbox is checked
   expect(checkbox).toBeChecked();
